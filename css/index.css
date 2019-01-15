@@ -294,10 +294,12 @@ nav a {
   nav.row {
     max-width: 100%;
   }
+  nav a:nth-child(6) {
+    border-bottom: 1px solid black;
+  }
   nav a {
     width: 100%;
     border-top: 1px solid black;
-    border-bottom: 1px solid black;
     padding: 18px 0 18px;
     text-align: center;
     font-size: 1.2em;
