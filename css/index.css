@@ -1,3 +1,380 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
+/* Use your CSS from RWD - I here.  IF you don't have CSS, use the solution CSS from RWD - I*/
 
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Titillium Web", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Bangers", cursive;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+/* UTILITIES */
+
+/* adds a bottom border for certain elements */
+.bottom-line {
+  padding-bottom: 50px;
+  border-bottom: 1px solid black;
+}
+
+@media (max-width: 500px) {
+  section.bottom-line {
+    padding-bottom: 0;
+  }
+}
+
+/* adds a top space for certain elements */
+.top-space {
+  margin-top: 20px;
+}
+
+/* container to set width of page */
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+@media (max-width: 800px) {
+  .container {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 500px;
+  }
+}
+
+/* TYPOGRAPHY */
+
+/* increase size h2 */
+h2.header-styles {
+  font-size: 1.3em;
+}
+
+/* header font size */
+header .half-column h1 {
+  font-size: 4.8em;
+  line-height: 0.9;
+}
+
+/* increase size of paragraphs */
+section .half-column p,
+section .third-column p {
+  font-size: 1.1em;
+  line-height: 1.2;
+}
+
+address p {
+  font-size: 1.1em;
+}
+
+@media (max-width: 500px) {
+  h2.header-styles {
+    font-size: 1em;
+  }
+  section .half-column p,
+  section .third-column p {
+    font-size: 1em;
+    line-height: 1;
+  }
+
+  address p {
+    font-size: 1em;
+  }
+}
+
+/* FLEX ROWS AND COLUMNS */
+
+.row {
+  max-width: 95%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.half-column {
+  flex: 0 1 49.7%;
+}
+
+.third-column {
+  flex: 0 1 32%;
+}
+
+@media (max-width: 500px) {
+  .half-column,
+  .third-column {
+    flex: 0 1 100%;
+    margin: 9% 0 9%;
+  }
+}
+
+/* NAVIGATION */
+
+nav.row {
+  width: 1024px;
+  margin: 32px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: grey;
+  text-decoration: none;
+}
+
+@media (max-width: 800px) {
+  nav figure {
+    order: -1;
+    width: 100%;
+    margin-bottom: 5%;
+  }
+  nav figure img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 500px) {
+  nav.row {
+    max-width: 100%;
+  }
+  nav a {
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 18px 0 18px;
+    text-align: center;
+    font-size: 1.2em;
+  }
+}
+
+/* HEADER */
+
+header.row {
+  text-align: center;
+  margin-top: 0px;
+}
+@media (max-width: 800px) {
+  header.row {
+    justify-content: center;
+    max-height: 390px;
+  }
+}
+
+header .half-column {
+  margin: 5% 0 3%;
+}
+
+@media (max-width: 800px) {
+  header .half-column {
+    flex: 0 1 100%;
+  }
+}
+
+header figure img {
+  width: 89%;
+}
+
+@media (max-width: 800px) {
+  header figure img {
+    display: none;
+  }
+}
+
+header .half-column button {
+  background-color: white;
+  font-size: 1em;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 60px;
+  display: block;
+  margin: 3% auto;
+}
+
+@media (max-width: 800px) {
+  header .half-column button {
+    padding: 7px 40px;
+  }
+}
+
+/* IMAGE BANNER */
+
+section.row,
+figure.row {
+  margin: 3% auto;
+}
+
+figure.row img {
+  width: 100%;
+}
+
+/* CONTACT */
+
+address {
+  width: 95%;
+  margin: 1% auto;
+}
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+  margin: 5% 0;
+  width: 95%;
+}
