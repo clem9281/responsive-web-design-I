@@ -168,7 +168,11 @@ h5 {
   padding-bottom: 50px;
   border-bottom: 1px solid black;
 }
-@media (max-width: 800px) {
+
+@media (max-width: 500px) {
+  section.bottom-line {
+    padding-bottom: 0;
+  }
 }
 
 /* adds a top space for certain elements */
@@ -200,6 +204,7 @@ h2.header-styles {
   font-size: 1.3em;
 }
 
+/* header font size */
 header .half-column h1 {
   font-size: 4.8em;
   line-height: 0.9;
@@ -311,11 +316,6 @@ header.row {
     max-height: 390px;
   }
 }
-/* @media (max-width: 500px) {
-  header.row {
-    margin-bottom: 8%;
-  }
-} */
 
 header .half-column {
   margin: 5% 0 3%;
@@ -350,13 +350,6 @@ header .half-column button {
 @media (max-width: 800px) {
   header .half-column button {
     padding: 7px 40px;
-  }
-}
-
-/* FEATURES AND ABOUT */
-@media (max-width: 500px) {
-  section.bottom-line {
-    padding-bottom: 0;
   }
 }
 
